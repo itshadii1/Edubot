@@ -5,10 +5,9 @@ from agent_setup import run_agent_once
 
 app = FastAPI()
 
-# Allow Android app calls (adjust origins as needed)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # in prod, restrict to your app/domain
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
